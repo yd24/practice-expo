@@ -2,9 +2,13 @@ import { useState, useEffect } from 'react';
 import { Button, StyleSheet, Text, View, Vibration } from 'react-native';
 import { NativeBaseProvider } from 'native-base';
 
+import Header from './components/Header';
+import Toggle from './components/Toggle';
+import Types from './components/Types';
+
 export default function App() {
   const [massageOn, setMassageOn] = useState(false);
-  const [massageType, setMassageType] = useState(null);
+  const [massageType, setMassageType] = useState('steady');
 
   const massage = (action) => {
     switch(action) {
@@ -44,56 +48,12 @@ export default function App() {
 
   return (
     <NativeBaseProvider>
+      <Header />
       <View style={styles.container}>
-        <Text style={styles.title}>Phone Massager</Text>
-
+        <Toggle />
+        <Types massageType={massageType} setMassageType={setMassageType}/>
         <Text>{`${massageOn}`}</Text>
         <Text>{`${massageType}`}</Text>
-
-        <View style={styles.button}>
-          <Button
-            title={massageOn ? 'Turn off' : 'Turn on'}
-            onPress={() => {
-              setMassageOn(!massageOn);
-            }}
-          />
-        </View>
-
-        <View style={styles.button}>
-          <Button
-            title="Level 1"
-            onPress={() => {
-              setMassageType('pulse');
-            }}
-          />
-        </View>
-
-        <View style={styles.button}>
-          <Button
-            title="Level 2"
-            onPress={() => {
-              setMassageType('fast-pulse');
-            }}
-          />
-        </View>
-
-        <View style={styles.button}>
-          <Button
-            title="Level 3"
-            onPress={() => {
-              setMassageType('wave');
-            }}
-          />
-        </View>
-
-        <View style={styles.button}>
-          <Button
-            title="Level 4"
-            onPress={() => {
-              setMassageType('steady');
-            }}
-          />
-        </View>
       </View>
     </NativeBaseProvider>
   );
@@ -102,7 +62,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#146C94',
     alignItems: 'center',
     justifyContent: 'center',
   },

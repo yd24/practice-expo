@@ -65,12 +65,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#146C94',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    marginBottom: 20
-  },
-  button: {
-    marginBottom: 15,
   }
 });

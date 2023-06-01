@@ -47,7 +47,6 @@ export default function Types(props) {
 const styles = StyleSheet.create({
   stack: {
     gap: 10,
-    marginTop: 40
   },
   text: {
     color: 'white',

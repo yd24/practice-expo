@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
+    marginBottom: 60,
+    marginTop: 30,
   },
   toggleOn: {
     backgroundColor: '#FEFF86',

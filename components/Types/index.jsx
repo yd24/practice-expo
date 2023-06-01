@@ -10,7 +10,7 @@ export default function Types(props) {
       value={props.massageType}
       onChange={newValue => props.setMassageType(newValue)}
     >
-      <VStack style={styles.stack}>
+      <VStack space={6}>
         <Radio 
           value='steady'
         >
@@ -45,9 +45,6 @@ export default function Types(props) {
 };
 
 const styles = StyleSheet.create({
-  stack: {
-    gap: 10,
-  },
   text: {
     color: 'white',
     fontSize: 15

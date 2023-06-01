@@ -8,12 +8,11 @@ export default function Types(props) {
       name='MassageTypes'
       accessbilityLabel='Types of massage'
       value={props.massageType}
-      onChange={newValue => setMassageType(newValue)}
+      onChange={newValue => props.setMassageType(newValue)}
     >
       <VStack style={styles.stack}>
         <Radio 
           value='steady'
-          style={styles.radio}
         >
           <Text style={styles.text}>
             Steady
@@ -21,7 +20,6 @@ export default function Types(props) {
         </Radio>
         <Radio 
           value ='pulse'
-          style={styles.radio}
         >
           <Text style={styles.text}>
             Pulse
@@ -29,7 +27,6 @@ export default function Types(props) {
         </Radio>
         <Radio 
           value='fast-pulse'
-          style={styles.radio}
         >
           <Text style={styles.text}>
             Fast Pulse
@@ -37,7 +34,6 @@ export default function Types(props) {
         </Radio>
         <Radio 
           value='wave'
-          style={styles.radio}
         >
           <Text style={styles.text}>
             Wave

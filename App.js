@@ -50,7 +50,7 @@ export default function App() {
     <NativeBaseProvider>
       <Header />
       <View style={styles.container}>
-        <Toggle />
+        <Toggle massageOn={massageOn} setMassageOn={setMassageOn}/>
         <Types massageType={massageType} setMassageType={setMassageType}/>
         <Text>{`${massageOn}`}</Text>
         <Text>{`${massageType}`}</Text>

@@ -1,10 +1,13 @@
 import { Pressable, Text, StyleSheet } from 'react-native';
 
-export default function Toggle() {
+export default function Toggle(props) {
   return(
-    <Pressable style={styles.toggle}>
+    <Pressable 
+      onPress={() => props.setMassageOn(!props.massageOn)}
+      style={styles.toggle}
+    >
       <Text style={styles.toggleText}>
-        Turn On
+        {props.massageOn ? 'Turn Off' : 'Turn On'}
       </Text>
     </Pressable>
   );
